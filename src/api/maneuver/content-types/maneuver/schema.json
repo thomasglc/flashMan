@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maneuvers",
+  "info": {
+    "singularName": "maneuver",
+    "pluralName": "maneuvers",
+    "displayName": "Manoeuvre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "maneuverCount": {
+      "type": "integer",
+      "required": true
+    },
+    "hasVictim": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "victimCount": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "materiels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::material.material"
+    },
+    "theme_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::theme-type.theme-type"
+    }
+  }
+}

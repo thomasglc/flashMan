@@ -1,0 +1,7 @@
+/**
+ * maneuver router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::maneuver.maneuver');

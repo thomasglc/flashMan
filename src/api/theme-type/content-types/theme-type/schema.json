@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "theme_types",
+  "info": {
+    "singularName": "theme-type",
+    "pluralName": "theme-types",
+    "displayName": "themeType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
