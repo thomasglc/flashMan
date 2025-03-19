@@ -385,6 +385,7 @@ export interface ApiManeuverManeuver extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    duration: Schema.Attribute.String & Schema.Attribute.Required;
     hasVictim: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
@@ -396,6 +397,7 @@ export interface ApiManeuverManeuver extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     maneuverCount: Schema.Attribute.Integer & Schema.Attribute.Required;
     materiels: Schema.Attribute.Relation<'oneToMany', 'api::material.material'>;
+    people: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     theme_types: Schema.Attribute.Relation<
       'oneToMany',

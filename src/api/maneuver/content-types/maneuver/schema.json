@@ -41,6 +41,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::theme-type.theme-type"
+    },
+    "duration": {
+      "type": "string",
+      "required": true
+    },
+    "people": {
+      "type": "integer",
+      "required": false
     }
   }
 }
