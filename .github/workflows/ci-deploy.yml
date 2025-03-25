@@ -33,14 +33,14 @@ jobs:
           touch .env 
           echo "DATABASE_HOST=${{ secrets.DATABASE_CLIENT }}" >> .env
           echo "DATABASE_HOST=strapiDB" >> .env
-          echo "DATABASE_PORT=${secrets.DATABASE_PORT}" >> .env
-          echo "DATABASE_NAME=${secrets.DATABASE_NAME}" >> .env
-          echo "DATABASE_USERNAME=${secrets.DATABASE_USERNAME}" >> .env
-          echo "DATABASE_PASSWORD=${secrets.DATABASE_PASSWORD}" >> .env
-          echo "JWT_SECRET=${secrets.JWT_SECRET}" >> .env
-          echo "ADMIN_JWT_SECRET=${secrets.ADMIN_JWT_SECRET}" >> .env
-          echo "APP_KEYS=${secrets.APP_KEYS}" >> .env
-          echo "NODE_ENV=${secrets.NODE_ENV}" >> .env
+          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}" >> .env
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> .env
+          echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}" >> .env
+          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}" >> .env
+          echo "APP_KEYS=${{ secrets.APP_KEYS }}" >> .env
+          echo "NODE_ENV=${{ secrets.NODE_ENV }}" >> .env
           echo "API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT}}" >> .env
           echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET}}" >> .env
           echo "TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT}}" >> .env
