@@ -2,8 +2,7 @@ name: 🚀 Deploy
 on:
   push:
     branches:
-      - main
-      - dev
+      - master
   pull_request: {}
 
 permissions:
@@ -11,7 +10,6 @@ permissions:
   contents: read
 
 jobs:
-
   deploy:
     name: 🚀 Deploy
     runs-on: [self-hosted]
@@ -30,9 +28,8 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-
       - name: 🚀 Run Docker Compose on Production
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
           touch .env 
           echo "DATABASE_HOST=${{ secrets.DATABASE_CLIENT }}" >> .env
@@ -50,7 +47,4 @@ jobs:
           echo "TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT}}" >> .env
           docker compose -f docker-compose.prod.yml up --build -d
           docker system prune --all --volumes --force
-
-
-          DATABASE_CLIENT: ${DATABASE_CLIENT}
       
