@@ -31,7 +31,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         run: |
           touch .env 
-          echo "DATABASE_CIENT=${{ secrets.DATABASE_CLIENT }}" >> .env
+          echo "DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT }}" >> .env
           echo "DATABASE_HOST=strapiDB" >> .env
           echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}" >> .env
           echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> .env
