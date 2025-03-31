@@ -384,7 +384,7 @@ export interface ApiManeuverManeuver extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     duration: Schema.Attribute.String & Schema.Attribute.Required;
     hasVictim: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
